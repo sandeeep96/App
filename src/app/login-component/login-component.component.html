@@ -1,0 +1,27 @@
+<h2 style="text-align: center;">Login Page</h2>
+  <div class="center">
+      
+  <div id="login">
+
+  <h1><strong>Welcome.</strong> Please login.</h1>
+  <form [formGroup]="forms" (ngSubmit)="loginUser(forms.value)">
+  <fieldset>
+  <p><input type="text" formControlName="User" required placeholder="Username" autofocus></p>
+  <p><input type="password" formControlName="Password" required placeholder="Password" ></p>
+  <p><a href="#">Forgot Password?</a></p>
+  <p><input type="submit" value="Login" ></p>
+  </fieldset>
+  </form>
+  <!-- <p><span class="btn-round">or</span></p>
+  <p>
+  <a class="facebook-before"></a>
+  <button class="facebook">Login Using Facbook</button>
+  </p>
+  <p>
+  <a class="twitter-before"></a>
+  <button class="twitter">Login Using Twitter</button>
+  </p>
+  </div>  -->
+  <h5 *ngIf="userMsg" style="padding-left: 10px;color:#FF0000;"> Username or Password is incorrect !!!!!!</h5>
+  </div> 
+ 
